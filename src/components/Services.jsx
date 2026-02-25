@@ -3,73 +3,77 @@ import { motion } from 'framer-motion'
 import { Layers, Droplets, PenTool } from 'lucide-react'
 
 const serviceData = [
-    {
-        icon: <Layers size={40} />,
-        title: "Installation",
-        description: "Fast, clean, and structurally superior. We handle framing and board hanging with precision for lasting durability.",
-        tag: "Fast & Precise"
-    },
-    {
-        icon: <Droplets size={40} />,
-        title: "Taping & Mudding",
-        description: "Seamless joints and perfectly smooth surfaces. Our multi-stage finishing process ensures walls are ready for paint.",
-        tag: "Seamless Finish"
-    },
-    {
-        icon: <PenTool size={40} />,
-        title: "Repairs & Texturing",
-        description: "Matching existing walls perfectly. From small holes to complete textured matching, we make damage disappear.",
-        tag: "Perfect Match"
-    }
+  {
+    icon: <Layers size={40} />,
+    title: "Installation",
+    description: "Fast, clean, and structurally superior. We handle framing and board hanging with precision for lasting durability.",
+    tag: "Fast & Precise"
+  },
+  {
+    icon: <Droplets size={40} />,
+    title: "Taping & Mudding",
+    description: "Seamless joints and perfectly smooth surfaces. Our multi-stage finishing process ensures walls are ready for paint.",
+    tag: "Seamless Finish"
+  },
+  {
+    icon: <PenTool size={40} />,
+    title: "Repairs & Texturing",
+    description: "Matching existing walls perfectly. From small holes to complete textured matching, we make damage disappear.",
+    tag: "Perfect Match"
+  }
 ]
 
 const Services = () => {
-    return (
-        <section id="services" className="services">
-            <div className="container">
-                <div className="section-header">
-                    <motion.span
-                        className="overline"
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        Our Expertise
-                    </motion.span>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                    >
-                        Premium Drywall <span className="accent-text">Solutions</span>
-                    </motion.h2>
-                </div>
+  return (
+    <section id="services" className="services">
+      <div className="container">
+        <div className="section-header">
+          <motion.span
+            className="overline"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Our Expertise
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            Premium Drywall <span className="accent-text">Solutions</span>
+          </motion.h2>
+        </div>
 
-                <div className="services-grid">
-                    {serviceData.map((service, index) => (
-                        <motion.div
-                            key={index}
-                            className="glass-card service-card"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.2 }}
-                            whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                        >
-                            <div className="service-icon">{service.icon}</div>
-                            <span className="service-tag">{service.tag}</span>
-                            <h3>{service.title}</h3>
-                            <p>{service.description}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
+        <div className="services-grid">
+          {serviceData.map((service, index) => (
+            <motion.div
+              key={index}
+              className="glass-card service-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
+            >
+              <div className="service-icon">{service.icon}</div>
+              <span className="service-tag">{service.tag}</span>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
-            <style jsx="true">{`
+      <style jsx="true">{`
         .services {
           padding: var(--section-padding);
-          background: rgba(0, 0, 0, 0.1);
+          background-image: linear-gradient(rgba(42, 45, 52, 0.95), rgba(27, 30, 35, 0.95)), url('https://images.unsplash.com/photo-1768839725085-829e6ac7ac26?auto=format&fit=crop&q=80');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          position: relative;
         }
 
         .section-header {
@@ -139,8 +143,8 @@ const Services = () => {
           background: rgba(255, 255, 255, 0.08);
         }
       `}</style>
-        </section>
-    )
+    </section>
+  )
 }
 
 export default Services

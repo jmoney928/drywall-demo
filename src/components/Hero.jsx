@@ -3,77 +3,77 @@ import { motion } from 'framer-motion'
 import { CheckCircle, Star, Award } from 'lucide-react'
 
 const Hero = () => {
-    return (
-        <section className="hero">
-            <div className="container hero-content">
-                <motion.div
-                    className="hero-text"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                    >
-                        Flawless Drywall.<br />
-                        <span className="accent-text">Zero Hassle.</span><br />
-                        Perfect Finish.
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                    >
-                        Expert installation, taping, and texturing for residential and commercial spaces.
-                        Get your project done on time and on budget.
-                    </motion.p>
-                    <motion.div
-                        className="hero-ctas"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                    >
-                        <a href="#contact" className="btn-primary btn-large">
-                            Get My Free Quote Now
-                        </a>
-                    </motion.div>
+  return (
+    <section className="hero">
+      <div className="container hero-content">
+        <motion.div
+          className="hero-text"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Flawless Drywall.<br />
+            <span className="accent-text">Zero Hassle.</span><br />
+            Perfect Finish.
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            Expert installation, taping, and texturing for residential and commercial spaces.
+            Get your project done on time and on budget.
+          </motion.p>
+          <motion.div
+            className="hero-ctas"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <a href="#contact" className="btn-primary btn-large">
+              Get My Free Quote Now
+            </a>
+          </motion.div>
 
-                    <motion.div
-                        className="trust-badges"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 1 }}
-                    >
-                        <div className="badge">
-                            <CheckCircle size={18} />
-                            <span>Licensed & Insured</span>
-                        </div>
-                        <div className="badge">
-                            <Star size={18} />
-                            <span>5-Star Rated</span>
-                        </div>
-                        <div className="badge">
-                            <Award size={18} />
-                            <span>10+ Years Experience</span>
-                        </div>
-                    </motion.div>
-                </motion.div>
-
-                <div className="hero-visual">
-                    <div className="abstract-shape shape-1"></div>
-                    <div className="abstract-shape shape-2"></div>
-                    <div className="glass-panel">
-                        <div className="panel-content">
-                            <h3>Next-Gen Finish</h3>
-                            <p>Smooth as glass. Every time.</p>
-                        </div>
-                    </div>
-                </div>
+          <motion.div
+            className="trust-badges"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            <div className="badge">
+              <CheckCircle size={18} />
+              <span>Licensed & Insured</span>
             </div>
+            <div className="badge">
+              <Star size={18} />
+              <span>5-Star Rated</span>
+            </div>
+            <div className="badge">
+              <Award size={18} />
+              <span>10+ Years Experience</span>
+            </div>
+          </motion.div>
+        </motion.div>
 
-            <style jsx="true">{`
+        <div className="hero-visual">
+          <div className="abstract-shape shape-1"></div>
+          <div className="abstract-shape shape-2"></div>
+          <div className="glass-panel">
+            <div className="panel-content">
+              <h3>Next-Gen Finish</h3>
+              <p>Smooth as glass. Every time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style jsx="true">{`
         .hero {
           position: relative;
           min-height: 100vh;
@@ -81,6 +81,10 @@ const Hero = () => {
           align-items: center;
           padding-top: 100px;
           overflow: hidden;
+          background-image: linear-gradient(rgba(27, 30, 35, 0.85), rgba(42, 45, 52, 0.9)), url('https://images.unsplash.com/photo-1751486403890-793880b12adb?auto=format&fit=crop&q=80');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
         }
 
         .hero-content {
@@ -202,8 +206,8 @@ const Hero = () => {
           }
         }
       `}</style>
-        </section>
-    )
+    </section>
+  )
 }
 
 export default Hero
